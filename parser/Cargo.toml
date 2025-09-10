@@ -1,0 +1,9 @@
+[package]
+edition = "2018"
+name = "parser"
+
+[features]
+logs = []
+
+[dev-dependencies]
+root = {workspace = true, features = ["logs"]}

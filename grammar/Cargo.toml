@@ -1,0 +1,12 @@
+[package]
+edition = "2018"
+name = "grammar"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+parser.workspace = true
+
+[dev-dependencies]
+root = {workspace = true, features = ["logs"]}
