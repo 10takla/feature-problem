@@ -1,0 +1,19 @@
+[package]
+edition = "2018"
+name = "root"
+
+[dependencies]
+grammar.workspace = true
+parser.workspace = true
+
+[features]
+logs = ["parser/logs"]
+
+[workspace]
+default-members = [".", "grammar", "parser"]
+members = ["grammar", "parser"]
+
+[workspace.dependencies]
+root = {path = "."}
+grammar = {path = "grammar"}
+parser = {path = "parser", features = ["logs"]}
