@@ -4,16 +4,17 @@ name = "root"
 
 [dependencies]
 grammar.workspace = true
-parser.workspace = true
+parser = { workspace = true, features = ["logs"] }
 
 [features]
 logs = ["parser/logs"]
 
 [workspace]
+resolver = "2"
 default-members = [".", "grammar", "parser"]
 members = ["grammar", "parser"]
 
 [workspace.dependencies]
 root = {path = "."}
 grammar = {path = "grammar"}
-parser = {path = "parser", features = ["logs"]}
+parser = {path = "parser"}
