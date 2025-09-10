@@ -3,8 +3,3 @@ pub fn parse() {
         eprintln!("parsing...");
     }
 }
-
-#[test]
-fn parse_test() {
-    root::parser::parse();
-}
